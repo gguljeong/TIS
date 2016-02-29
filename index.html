@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <title>TIS정보기술교육센터</title>
+        <style type="text/css">
+            #logo{
+                margin-right: auto;
+                margin-left: auto;
+            }
+            
+            .ui-li-thumb{
+                padding-top: 10px;
+                padding-left: 10px;
+            }
+            
+            .title_style{
+                padding-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div data-role="page" id="main">
+            <div data-role="header" data-theme="c">
+                <h1 id="logo"><img src="logo.jpg" width="300"></h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview">
+                    <li><a href="photo.html">
+                        <img src="building.png" width="60" alt="" class="ui-li-thumb"/><h3 class="title_style">교육센터사진</h3></a></li>
+                    <li><a href="introduce.html">
+                         <img src="book.png" width="60" alt="" class="ui-li-thumb"/><h3 class="title_style">교육센터소개</h3></a></li>
+                    <li><a href="#">
+                        <img src="video.png" width="60" alt="" class="ui-li-thumb"/><h3 class="title_style">교육센터영상</h3></a></li>
+                    <li><a href="#">
+                         <img src="map.png" width="60" alt="" class="ui-li-thumb"/><h3 class="title_style">교육센터위치</h3></a></li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

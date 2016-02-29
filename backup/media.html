@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, width=device-width" />
+        <title>media query test</title>
+        <style type="text/css">
+            @media (max-width:799px){
+                body{
+                    background-color: red;
+                }
+                #title:after{content:"smartphone"}
+            }
+            @media only screen and (min-width: 800px) and (max-width: 1023px){
+                body {
+                    background-color: green;
+                }
+                #title:after{content:"tablet"}
+            }
+            @media only screen and (min-width:1024px){
+                body{
+                    background-color: blue;
+                }
+                #title:after{content:"desktop"}
+            }
+        </style>
+    </head>
+    <body>
+        배경색이 스크린 크기에 따라 변경됩니다.
+        <h1 id="title">접속기기</h1>
+    </body>
+</html>
+
