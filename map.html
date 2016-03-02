@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+        <title>TIS정보기술교육센터</title>
+        <style type="text/css">
+            .map_style{
+                padding:0px;
+                height: 100%;
+                width: 100%;
+            }
+            
+        </style>
+
+        <!-- jquery ui map -->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+        <script type="text/javascript" src="/ui/jquery.ui.map.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(
+                function(){
+                    var StartLatLng=new google.maps.LatLng(37.533978, 126.899016);
+                    $("#map_canvas").gmap({"center":StartLatLng, "zoom":16});
+                    
+                    var markerRed="http://www.google.com/intl/en_us/mapfiles/ms/icons/red-dot.png";  
+                    $("#map_canvas").gmap("addMarker",{"position":StartLatLng,"icon":markerRed});
+                }
+            );  
+        </script>
+
+        
+    </head>
+    <body>
+        <div data-role="page" class="map_style" id="page">
+            <div data-role="header" >
+                <a href="index.html" data-icon="back">back</a>
+                <a href="index.html" data-icon="home" data-iconpos="notext">home</a>
+                <h1>교육센터 위치</h1>
+            </div>
+            <div data-role="content" class="map_style">
+                <div id="map_canvas" class="map_style"></div>
+            </div>
+        </div>
+    </body>
+</html>
